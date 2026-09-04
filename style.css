@@ -1,0 +1,345 @@
+/* ========================================
+   CONFIGURAÇÃO GERAL
+======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 40px auto;
+    max-width: 1000px;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+header {
+    background-color: #1e3a8a;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.apresentacao {
+    color: #dbeafe;
+    font-size: 18px;
+    margin: 15px 0 20px;
+}
+
+.objetivo {
+    color: #e0f2fe;
+    font-size: 16px;
+    margin: 10px 0 20px;
+}
+
+
+/* ========================================
+   MENU
+======================================== */
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a.ativo {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+/* ========================================
+   TÍTULOS
+======================================== */
+
+h1 {
+    color: #1e3a8a;
+}
+
+h2 {
+    color: #2563eb;
+    margin-top: 40px;
+}
+
+h3 {
+    color: #1e3a8a;
+}
+
+
+/* ========================================
+   LISTAS DE HABILIDADES
+======================================== */
+
+ul {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    background-color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+
+/* ========================================
+   PROJETOS
+======================================== */
+
+.projeto {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.projeto h3 {
+    margin-top: 0;
+}
+
+.projeto a {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.projeto a:hover {
+    background-color: #1e3a8a;
+}
+
+
+/* ========================================
+   BOTÕES
+======================================== */
+
+button {
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e3a8a;
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   BOTÃO DO GITHUB
+======================================== */
+
+#contato > a {
+    display: inline-block;
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contato > a:hover {
+    background-color: #2563eb;
+}
+
+
+/* ========================================
+   ANIMAÇÃO DAS SEÇÕES
+======================================== */
+
+.revelar {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.revelar.ativo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   BOTÃO VOLTAR AO TOPO
+======================================== */
+
+#voltarTopo {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 22px;
+    z-index: 1000;
+}
+
+
+/* ========================================
+   FORMULÁRIO DE CONTATO
+======================================== */
+
+#formularioContato {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+#formularioContato label {
+    font-weight: bold;
+}
+
+#formularioContato input,
+#formularioContato textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#formularioContato textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#formularioContato button {
+    margin-top: 10px;
+}
+
+
+/* ========================================
+   MODO ESCURO
+======================================== */
+
+.dark {
+    background-color: #111827;
+    color: white;
+}
+
+.dark h1,
+.dark h2,
+.dark h3 {
+    color: #60a5fa;
+}
+
+.dark .projeto,
+.dark li {
+    background-color: #1f2937;
+}
+
+.dark .projeto h3 {
+    color: #93c5fd;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE PARA CELULAR
+======================================== */
+
+@media (max-width: 768px) {
+
+    body {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 0;
+    }
+
+    ul {
+        justify-content: center;
+    }
+
+    .projeto {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #voltarTopo {
+        width: 45px;
+        height: 45px;
+    }
+
+    #formularioContato {
+        max-width: 100%;
+    }
+
+}
+
+/* ========================================
+   MENSAGEM DO FORMULÁRIO
+======================================== */
+
+#mensagemFormulario {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.sucesso {
+    color: green;
+}
+
+.erro {
+    color: red;
+}
