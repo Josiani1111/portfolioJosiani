@@ -18,15 +18,23 @@
 
     <main>
 
-        <div class="card">
+        <div class="card resultado">
 
             <h2>Cadastro realizado! 🎉</h2>
 
             <p>Os dados foram enviados com sucesso.</p>
 
-            <p><strong>Nome:</strong> {{ nome }}</p>
+            <div class="dados">
+                <p>
+                    <strong>Nome:</strong><br>
+                    {{ nome }}
+                </p>
 
-            <p><strong>E-mail:</strong> {{ email }}</p>
+                <p>
+                    <strong>E-mail:</strong><br>
+                    {{ email }}
+                </p>
+            </div>
 
             <form action="/" method="get">
                 <button type="submit">Voltar</button>
@@ -37,4 +45,5 @@
     </main>
 
 </body>
+
 </html>
