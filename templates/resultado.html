@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro realizado</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Quick Filler</h1>
+        <p>Desafio Programador</p>
+    </header>
+
+    <main>
+
+        <div class="card">
+
+            <h2>Cadastro realizado! 🎉</h2>
+
+            <p>Os dados foram enviados com sucesso.</p>
+
+            <p><strong>Nome:</strong> {{ nome }}</p>
+
+            <p><strong>E-mail:</strong> {{ email }}</p>
+
+            <form action="/" method="get">
+                <button type="submit">Voltar</button>
+            </form>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
