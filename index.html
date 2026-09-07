@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Portfólio - Josiani Oliveira</title>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Olá, eu sou Josiani!</h1>
+
+        <p class="apresentacao">
+            Estudante de Análise e Desenvolvimento de Sistemas |
+            Python | SQL | HTML | CSS | JavaScript
+        </p>
+
+        <p class="objetivo">
+            Em busca de oportunidades na área de tecnologia para desenvolver meus conhecimentos,
+            contribuir com projetos e crescer profissionalmente como desenvolvedora.
+        </p>
+
+        <nav>
+            <a href="#sobre" class="menu-link">Sobre</a>
+            <a href="#aprendendo" class="menu-link">O que estou aprendendo</a>
+            <a href="#projetos" class="menu-link">Meus Projetos</a>
+            <a href="#contato" class="menu-link">Contato</a>
+        </nav>
+
+        <button id="tema">🌙 Modo Escuro</button>
+
+    </header>
+
+
+    <main>
+
+        <section id="sobre" class="revelar">
+
+            <h2>Sobre mim</h2>
+
+            <p>
+                Sou estudante de Análise e Desenvolvimento de Sistemas,
+                com interesse em tecnologia, programação e desenvolvimento de soluções.
+                Estou aprimorando meus conhecimentos em Python, SQL, HTML, CSS e JavaScript,
+                desenvolvendo projetos práticos para minha carreira na área de tecnologia.
+            </p>
+
+        </section>
+
+
+        <section class="revelar">
+
+            <h2>Minhas habilidades</h2>
+
+            <ul>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>SQLite</li>
+                <li>GitHub</li>
+            </ul>
+
+        </section>
+
+
+        <section id="aprendendo" class="revelar">
+
+            <h2>O que estou aprendendo</h2>
+
+            <ul>
+                <li>JavaScript</li>
+                <li>APIs REST</li>
+                <li>Testes de software</li>
+                <li>Git e GitHub</li>
+                <li>Desenvolvimento Web</li>
+            </ul>
+
+        </section>
+
+
+        <section id="projetos" class="revelar">
+
+            <h2>Meus Projetos</h2>
+
+            <div class="projeto">
+
+                <h3>1. Sistema de Cadastro de Clientes</h3>
+
+                <p>
+                    Sistema desenvolvido em Python com SQLite e testes automatizados.
+                </p>
+
+                <a href="https://github.com/Josiani1111/novo_desafio"
+                   target="_blank">
+                    Ver projeto no GitHub
+                </a>
+
+            </div>
+
+
+            <div class="projeto">
+
+                <h3>2. Quick Filler</h3>
+
+                <p>
+                    Projeto em Python para preenchimento automatizado de documentos.
+                </p>
+
+                <a href="https://github.com/Josiani1111/desafio-quick-filler"
+                   target="_blank">
+                    Ver projeto no GitHub
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section id="contato" class="revelar">
+
+            <h2>Contato</h2>
+
+            <p>
+                Entre em contato comigo e conheça mais sobre meus projetos
+                e minha trajetória na área de tecnologia.
+            </p>
+
+            <a href="https://github.com/Josiani1111"
+               target="_blank">
+                Meu GitHub
+            </a>
+
+            <br><br>
+
+
+            <form
+                id="formularioContato"
+                action="https://formspree.io/f/xaeybbgj"
+                method="POST"
+            >
+
+                <label for="nome">Nome:</label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+
+
+                <label for="email">E-mail:</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+
+
+                <label for="mensagem">Mensagem:</label>
+
+                <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    placeholder="Digite sua mensagem"
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+                    Enviar mensagem
+                </button>
+
+                <p id="mensagemFormulario"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <button id="voltarTopo" title="Voltar ao topo">
+        ↑
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
