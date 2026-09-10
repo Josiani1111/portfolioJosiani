@@ -12,28 +12,69 @@
 
 <body>
 
-    <header>
+    <header class="hero">
 
-        <h1>Olá, eu sou Josiani!</h1>
+        <div class="hero-conteudo">
 
-        <p class="apresentacao">
-            Estudante de Análise e Desenvolvimento de Sistemas |
-            Python | SQL | HTML | CSS | JavaScript
-        </p>
+            <div class="avatar">
+                JO
+            </div>
 
-        <p class="objetivo">
-            Em busca de oportunidades na área de tecnologia para desenvolver meus conhecimentos,
-            contribuir com projetos e crescer profissionalmente como desenvolvedora.
-        </p>
+            <div>
+
+                <h1>Josiani Oliveira</h1>
+
+                <p class="apresentacao">
+                    Estudante do último ano de Análise e Desenvolvimento de Sistemas
+                </p>
+
+                <p class="objetivo">
+                    Estagiária de TI na Câmara Municipal de Ribeirão Preto •
+                    Python • SQL • HTML • CSS • JavaScript
+                </p>
+
+                <div class="hero-botoes">
+
+                    <a href="#projetos" class="btn">
+                        Ver Projetos
+                    </a>
+
+                    <a href="https://github.com/Josiani1111"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn secundario">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
 
         <nav>
+
             <a href="#sobre" class="menu-link">Sobre</a>
-            <a href="#aprendendo" class="menu-link">O que estou aprendendo</a>
-            <a href="#projetos" class="menu-link">Meus Projetos</a>
-            <a href="#contato" class="menu-link">Contato</a>
+
+            <a href="#aprendendo" class="menu-link">
+                Aprendizado
+            </a>
+
+            <a href="#projetos" class="menu-link">
+                Projetos
+            </a>
+
+            <a href="#contato" class="menu-link">
+                Contato
+            </a>
+
         </nav>
 
-        <button id="tema">🌙 Modo Escuro</button>
+
+        <button id="tema">
+            🌙 Modo Escuro
+        </button>
 
     </header>
 
@@ -45,10 +86,14 @@
             <h2>Sobre mim</h2>
 
             <p>
-                Sou estudante de Análise e Desenvolvimento de Sistemas,
-                com interesse em tecnologia, programação e desenvolvimento de soluções.
-                Estou aprimorando meus conhecimentos em Python, SQL, HTML, CSS e JavaScript,
-                desenvolvendo projetos práticos para minha carreira na área de tecnologia.
+                Tenho experiência profissional em suporte de TI como estagiária
+                na Câmara Municipal de Ribeirão Preto e mais de 20 anos de atuação
+                em Planejamento e Controle da Produção e Compras.
+
+                Atualmente, desenvolvo projetos práticos em Python, SQL, HTML, CSS
+                e JavaScript para fortalecer minha transição para a área de
+                desenvolvimento, aplicando organização, resolução de problemas
+                e foco em resultados.
             </p>
 
         </section>
@@ -59,6 +104,7 @@
             <h2>Minhas habilidades</h2>
 
             <ul>
+
                 <li>Python</li>
                 <li>SQL</li>
                 <li>HTML</li>
@@ -66,6 +112,7 @@
                 <li>JavaScript</li>
                 <li>SQLite</li>
                 <li>GitHub</li>
+
             </ul>
 
         </section>
@@ -76,11 +123,13 @@
             <h2>O que estou aprendendo</h2>
 
             <ul>
+
                 <li>JavaScript</li>
                 <li>APIs REST</li>
                 <li>Testes de software</li>
                 <li>Git e GitHub</li>
                 <li>Desenvolvimento Web</li>
+
             </ul>
 
         </section>
@@ -90,16 +139,22 @@
 
             <h2>Meus Projetos</h2>
 
+
             <div class="projeto">
 
-                <h3>1. Sistema de Cadastro de Clientes</h3>
+                <h3>
+                    1. Sistema de Cadastro de Clientes
+                </h3>
 
                 <p>
-                    Sistema desenvolvido em Python com SQLite e testes automatizados.
+                    Sistema desenvolvido em Python com SQLite e testes
+                    automatizados, utilizando operações de cadastro,
+                    consulta, atualização e exclusão de clientes.
                 </p>
 
                 <a href="https://github.com/Josiani1111/novo_desafio"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener noreferrer">
                     Ver projeto no GitHub
                 </a>
 
@@ -108,14 +163,19 @@
 
             <div class="projeto">
 
-                <h3>2. Quick Filler</h3>
+                <h3>
+                    2. Quick Filler
+                </h3>
 
                 <p>
-                    Projeto em Python para preenchimento automatizado de documentos.
+                    Projeto desenvolvido em Python para automatização
+                    e preenchimento de documentos, aplicado como experiência
+                    prática de desenvolvimento e integração de tecnologias.
                 </p>
 
                 <a href="https://github.com/Josiani1111/desafio-quick-filler"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener noreferrer">
                     Ver projeto no GitHub
                 </a>
 
@@ -133,8 +193,10 @@
                 e minha trajetória na área de tecnologia.
             </p>
 
+
             <a href="https://github.com/Josiani1111"
-               target="_blank">
+               target="_blank"
+               rel="noopener noreferrer">
                 Meu GitHub
             </a>
 
@@ -147,7 +209,9 @@
                 method="POST"
             >
 
-                <label for="nome">Nome:</label>
+                <label for="nome">
+                    Nome:
+                </label>
 
                 <input
                     type="text"
@@ -158,7 +222,9 @@
                 >
 
 
-                <label for="email">E-mail:</label>
+                <label for="email">
+                    E-mail:
+                </label>
 
                 <input
                     type="email"
@@ -169,7 +235,9 @@
                 >
 
 
-                <label for="mensagem">Mensagem:</label>
+                <label for="mensagem">
+                    Mensagem:
+                </label>
 
                 <textarea
                     id="mensagem"
@@ -182,6 +250,7 @@
                 <button type="submit">
                     Enviar mensagem
                 </button>
+
 
                 <p id="mensagemFormulario"></p>
 
