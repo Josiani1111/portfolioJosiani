@@ -1,107 +1,446 @@
-/* Configuração geral da página */
+/* ========================================
+   CONFIGURAÇÃO GERAL
+======================================== */
+
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background: #f2f4f7;
+    background-color: #f4f7f9;
     color: #333;
-    min-height: 100vh;
+    margin: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Cabeçalho */
-header {
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.hero {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+    padding: 50px 30px 30px;
     text-align: center;
-    padding: 40px 20px 20px;
+    border-radius: 0 0 20px 20px;
 }
 
-header h1 {
-    font-size: 36px;
-    margin-bottom: 8px;
+.hero-conteudo {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: left;
 }
 
-header p {
-    font-size: 18px;
-    color: #666;
+.avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: white;
+    color: #1e3a8a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    font-weight: bold;
+    flex-shrink: 0;
 }
 
-/* Área principal */
-main {
+.hero h1 {
+    color: white;
+    font-size: 42px;
+    margin: 0 0 10px;
+}
+
+.apresentacao {
+    color: #dbeafe;
+    font-size: 19px;
+    margin: 0 0 10px;
+}
+
+.objetivo {
+    color: #e0f2fe;
+    font-size: 16px;
+    margin: 0 0 20px;
+}
+
+
+/* ========================================
+   BOTÕES DO CABEÇALHO
+======================================== */
+
+.hero-botoes {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    background-color: white;
+    color: #1e3a8a;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background-color: #dbeafe;
+}
+
+.btn.secundario {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn.secundario:hover {
+    background-color: white;
+    color: #1e3a8a;
+}
+
+
+/* ========================================
+   MENU
+======================================== */
+
+nav {
+    margin-top: 35px;
     display: flex;
     justify-content: center;
-    padding: 30px 20px 50px;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
-/* Cartão do formulário */
-.card {
-    width: 100%;
-    max-width: 500px;
-    background: white;
-    padding: 35px;
-    border-radius: 16px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-}
-
-.card h2 {
-    margin-bottom: 10px;
-    font-size: 26px;
-}
-
-.card > p {
-    margin-bottom: 25px;
-    color: #666;
-}
-
-/* Formulário */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-input {
-    padding: 13px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-}
-
-input:focus {
-    outline: none;
-    border-color: #555;
-}
-
-/* Botão */
-button {
-    padding: 14px;
-    border: none;
-    border-radius: 8px;
-    background: #222;
+nav a {
     color: white;
-    font-size: 16px;
     font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a.ativo {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   BOTÃO MODO ESCURO
+======================================== */
+
+#tema {
+    margin-top: 25px;
+}
+
+
+/* ========================================
+   ÁREA PRINCIPAL
+======================================== */
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* ========================================
+   SEÇÕES
+======================================== */
+
+section {
+    background-color: white;
+    margin: 30px 0;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #2563eb;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #1e3a8a;
+}
+
+
+/* ========================================
+   LISTAS DE HABILIDADES
+======================================== */
+
+ul {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    background-color: #eff6ff;
+    color: #1e3a8a;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 1px solid #dbeafe;
+}
+
+
+/* ========================================
+   PROJETOS
+======================================== */
+
+.projeto {
+    background-color: #f8fafc;
+    padding: 22px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-left: 5px solid #2563eb;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.projeto h3 {
+    margin-top: 0;
+}
+
+.projeto a,
+#contato > a {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.projeto a:hover,
+#contato > a:hover {
+    background-color: #1e3a8a;
+}
+
+
+/* ========================================
+   BOTÕES
+======================================== */
+
+button {
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 7px;
     cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-    opacity: 0.85;
+    background-color: #1e3a8a;
+    transform: scale(1.03);
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 30px;
+
+/* ========================================
+   FORMULÁRIO DE CONTATO
+======================================== */
+
+#formularioContato {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 650px;
+    margin-top: 20px;
+}
+
+#formularioContato label {
+    font-weight: bold;
+}
+
+#formularioContato input,
+#formularioContato textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+#formularioContato input:focus,
+#formularioContato textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px #dbeafe;
+}
+
+#formularioContato textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#formularioContato button {
+    margin-top: 10px;
+}
+
+
+/* ========================================
+   ANIMAÇÃO DAS SEÇÕES
+======================================== */
+
+.revelar {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.revelar.ativo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   BOTÃO VOLTAR AO TOPO
+======================================== */
+
+#voltarTopo {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 22px;
+    z-index: 1000;
+}
+
+
+/* ========================================
+   MENSAGEM DO FORMULÁRIO
+======================================== */
+
+#mensagemFormulario {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.sucesso {
+    color: green;
+}
+
+.erro {
+    color: red;
+}
+
+
+/* ========================================
+   MODO ESCURO
+======================================== */
+
+.dark {
+    background-color: #111827;
+    color: white;
+}
+
+.dark section {
+    background-color: #1f2937;
+}
+
+.dark h2 {
+    color: #60a5fa;
+}
+
+.dark h3 {
+    color: #93c5fd;
+}
+
+.dark li {
+    background-color: #374151;
+    color: #dbeafe;
+    border-color: #4b5563;
+}
+
+.dark .projeto {
+    background-color: #111827;
+}
+
+.dark #formularioContato input,
+.dark #formularioContato textarea {
+    background-color: #374151;
+    color: white;
+    border-color: #6b7280;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 35px 20px 25px;
     }
 
-    .card {
-        padding: 25px;
+    .hero-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .apresentacao {
+        font-size: 17px;
+    }
+
+    .hero-botoes {
+        justify-content: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+    ul {
+        justify-content: center;
+    }
+
+    #formularioContato {
+        max-width: 100%;
     }
 }
