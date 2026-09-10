@@ -190,3 +190,24 @@ secoes.forEach(function (secao) {
     observadorMenu.observe(secao);
 
 });
+// ========================================
+// MODO ESCURO
+// ========================================
+
+const botaoTema = document.getElementById("tema");
+
+botaoTema.addEventListener("click", function () {
+
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+
+        botaoTema.textContent = "☀️ Modo Claro";
+
+    } else {
+
+        botaoTema.textContent = "🌙 Modo Escuro";
+
+    }
+
+});
